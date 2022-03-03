@@ -43,7 +43,12 @@
     Решетка, в которой псевдодополнение определено для всех пар элементов, называется импликативной.
 \end{definition}
 
-Пример: решетка - диамант.
+\begin{figure}
+    \begin{center}
+        \includegraphics{img/diamont.pdf}
+        \caption{Решетка, в которой для $a,b$ не определено псевдодополнение}
+    \end{center}
+\end{figure}
 
 \begin{definition}
 Ноль $0$ и единица $1$~--- это нейтральные элементы операций $+$ и $\cdot$ одновременно.     
@@ -64,10 +69,17 @@
 Доказательства в этой системе рисуются в виде дерева, в отличиии от длинного списка, как получается в гильбертовском исчислении.
 Вид док-ва: $\Gamma \vdash \varphi$.
 
-Cхемы:
-\begin{enumerate}
-    \item $\over$ 
-\end{enumerate}
-
-$\Gamma, \phi \vdash \psi \over \psi$
+Схемы:
+\[
+    \dfrac{\Gamma, \varphi \vdash \psi}{\Gamma \vdash \varphi \to \psi},~~~
+    \dfrac{\Gamma, \varphi \vdash \psi~~~ \Gamma \vdash \varphi}{\Gamma \vdash \psi},~~~
+    \dfrac{\Gamma, \varphi ~~~ \Gamma \vdash \psi}{\Gamma \vdash \varphi \& \psi},~~~
+    \dfrac{\Gamma, \vdash \varphi \& \psi}{\Gamma \vdash \varphi},~~~
+    \dfrac{\Gamma, \vdash \varphi \& \psi}{\Gamma \vdash \psi},
+\]\[
+    \dfrac{\Gamma \vdash \varphi}{\Gamma\vdash\varphi \vee \psi},~~~
+    \dfrac{\Gamma \vdash \psi}{\Gamma\vdash\varphi \vee \psi},~~~
+    \dfrac{\Gamma, \varphi \vdash \rho~~~ \Gamma, \psi \vdash \rho~~~ \Gamma \vdash \varphi \vee \psi}{\Gamma\vdash\rho},~~~
+    \dfrac{\Gamma \vdash \bot }{\Gamma\vdash\varphi}.
+\]
 \endinput

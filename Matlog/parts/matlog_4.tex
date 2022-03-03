@@ -1,0 +1,97 @@
+\section{Алгебра Гейтинга}
+
+\begin{definition}
+    Алгебра Гейтинга --- это импилкативная решетка с 0.
+\end{definition}
+
+\begin{definition}
+    $\neg a \equiv a\to 0$.
+\end{definition}
+
+\begin{definition}
+    Булева алгебра --- алгебра Гейтинга, где $a + \neg a = 1$.
+\end{definition}
+
+Пример. 
+
+\begin{definition}
+    $\alpha \preccurlyeq \beta$, если $\alpha \vdash \beta$.
+\end{definition}
+
+\begin{definition}
+    $\alpha \approx \beta$, если $\alpha \preccurlyeq \beta$ и $\beta \preccurlyeq \alpha$.
+\end{definition}
+ 
+\begin{definition}
+    Пусть $E$~--- множество всех высказываний ИИВ.  
+    Тогда $[E]_{\approx}$ --- фактор-множество высказываний по отношению $\approx$, 
+    называется алгеброй Линденбаума, $L$.
+\end{definition}
+
+\begin{theorem}
+    Алгебра Линденбаума --- это алгебра Гейтинга.
+\end{theorem}
+
+\begin{theorem}
+    $L$ --- полная и корректная модель ИИВ.
+\end{theorem}
+
+\begin{theorem}
+    Алгебра Гейтинга --- полная и корректная модель ИИВ.
+\end{theorem}
+
+\begin{definition}
+    Исчисление дизьюнктно, если для любых $\alpha, \beta$ доказуемость $\alpha \lor \beta$ влечет доказуемость или $\alpha$ или $\beta$.
+\end{definition}
+
+\begin{theorem}
+    ИИВ дизьюнктно.
+\end{theorem}
+
+\begin{definition}
+    Пусть $A, B$ --- алгебры Гейтинга. 
+    $f$ называется гомоморфизмом, если $f(0_A) = 0_B$, $f(1_A) = 1_B$, $f (\alpha \star_A \beta) = f(\alpha) \star_B f(\beta)$.
+\end{definition}
+
+\begin{definition}
+    Гёделева алгебра --- та, в которой $a + b = 1$ влечёт $a=1$ или $b=1$.
+\end{definition}
+
+\begin{definition}
+    Пусть $A$ --- алгебра Гейтинга.
+    Определим $\Gamma (A)$.
+    $\gamma(x) = \begin{cases}
+        \omega, & x = 1_A \\
+        x, & x < 1_A \\
+    \end{cases}$.
+    Добавим $1_B$, которое больше каждого $\gamma(t)$. 
+\end{definition}
+
+\begin{theorem}
+    $\Gamma (A)$ --- гёделева алгебра.
+    В этой алгебре $\Gamma (A)$ выполнено $a + b = 1$ влечёт $a=1$ или $b=1$.  
+\end{theorem}
+
+\begin{theorem}
+    $\Gamma (L)$ гёделева. 
+\end{theorem}
+
+Определим $\gamma : \Gamma(L) \to L: \quad g(x) = \begin{cases}
+    1, & x = 1\ \text{или}\ x = \omega \\
+    x, & \text{иначе} 
+\end{cases}$. 
+Утверждается, что это гомоморфизм.
+
+Рассмотрим ИИВ и алгебры $L, \Gamma (L)$.
+Рассмотрим $\vdash \alpha \lor \beta$.
+$\Gamma (L)$ --- геделева алгебра, т.е алгебра Гейтинга.
+
+$\ldots $
+% \[\llbracket \alpha \lor \beta \rrbracket \]
+
+\begin{definition}
+    Модель ИИВ называется табличной, если множество истиностных значений $V = S$, $\llbracket \alpha \star \beta \rrbracket = f_\star (\llbracket \alpha \rrbracket, \llbracket \beta \rrbracket)$.
+    и есть два значения, выделенная истинна И, и $\llbracket \alpha \rrbracket = \text{И}$ в том и только том случае, когда $\vDash \alpha$.     
+\end{definition}
+
+\endinput
