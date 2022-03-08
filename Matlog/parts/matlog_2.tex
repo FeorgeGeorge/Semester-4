@@ -62,7 +62,6 @@
     Обозначение: значения пропозициональных переменных будем определять в верхнем индексе: $\llbracket \alpha \rrbracket ^{A = T, B = F \ldots}$
 \end{remark}
 
-
 \begin{definition}
     $\alpha$ --- общезначна (истинна), если $\llbracket \alpha \rrbracket = T$ при любой оценке $P$.
 
@@ -80,18 +79,20 @@
 \end{definition}
 
 \begin{definition}
-    $\Gamma \vDash \alpha$, $\alpha$ следует из $\Gamma = \{ \gamma_1, \ldots, \gamma_n\}$, если $\llbracket \alpha \rrbracket = T$ всегда при $\llbracket \gamma_i \rrbracket = T$ при любых $i$.  
+    $\Gamma \vDash \alpha$, $\alpha$ следует из $\Gamma = \{ \gamma_1, \ldots, \gamma_n\}$, 
+    если $\llbracket \alpha \rrbracket = T$ всегда при $\llbracket \gamma_i \rrbracket = T$ для любых $i$.  
 \end{definition}
 
 \begin{theorem}
-    Исчисление высказываний корректно
-    \[ \vdash \alpha\ \text{влечёт}\ \vDash \alpha \]
+    Исчисление высказываний корректно, т.е
+    \[ \vdash \alpha\ \text{влечёт}\ \vDash \alpha. \]
 \end{theorem}
 Мы даём доказательство на метаязыке, не пускаясь в отчаянный формализм.
 Такая строгость нас устраевает.
 \begin{proof}
     Индукция по длине доказательства. 
-    Не очень сложно.
+    Не очень сложно. 
+    ДОПОЛНИТЬ.
 \end{proof}
 
 В матлогике бесмысленно формализовывать русский язык.
